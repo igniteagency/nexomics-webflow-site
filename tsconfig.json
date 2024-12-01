@@ -6,6 +6,7 @@
     "baseUrl": "./",
     "paths": {
       "$utils/*": ["src/utils/*"],
+      "$components/*": ["src/components/*"],
       "$types/*": ["src/types/*"]
     }
   }
