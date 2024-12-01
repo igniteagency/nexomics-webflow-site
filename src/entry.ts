@@ -7,7 +7,8 @@ import { SCRIPTS_LOADED_EVENT } from './constants';
 import './dev/script-source';
 
 const LOCALHOST_BASE = 'http://localhost:3000/';
-window.PRODUCTION_BASE = 'https://cdn.jsdelivr.net/gh/igniteagency/{{repo}}/dist/prod/';
+window.PRODUCTION_BASE =
+  'https://cdn.jsdelivr.net/gh/igniteagency/nexomics-webflow-site/dist/prod/';
 
 window.JS_SCRIPTS = new Set();
 
