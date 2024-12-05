@@ -1,0 +1,1 @@
+"use strict";(()=>{var i="scriptsLoaded";var e=document.querySelector('[data-el="toc-accordion"]'),n=e==null?void 0:e.querySelector("summary");window.addEventListener(i,()=>{var t;e&&(s(),(t=window.Webflow)==null||t.resize.on(()=>{s()}))});function s(){window.innerWidth>991?e!=null&&e.open||n==null||n.click():e!=null&&e.open&&(e.open=!1)}})();
