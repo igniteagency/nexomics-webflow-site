@@ -4,6 +4,7 @@
  * Polls `localhost` on page load, else falls back to deriving code from production URL
  */
 import { SCRIPTS_LOADED_EVENT } from './constants';
+import './dev/debug';
 import './dev/script-source';
 
 const LOCALHOST_BASE = 'http://localhost:3000/';
