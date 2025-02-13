@@ -9,7 +9,7 @@ export function initBgColorChange() {
   // Fetch the actual colour values from your CSS variables
   const textPrimaryColor = getVariableColorValue('text-primary');
   const backgroundDefaultColor = getVariableColorValue('background-secondary');
-  const backgroundLightColor = getVariableColorValue('background-tertiary');
+  const backgroundLightColor = getVariableColorValue('bg-switch-tertiary');
   const textAlternateColor = getVariableColorValue('text-alternate');
   const backgroundAlternateColor = getVariableColorValue('background-alternate');
 
