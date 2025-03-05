@@ -17,3 +17,9 @@ window.Webflow?.push(() => {
   dialogInit();
   fadeUp();
 });
+
+const CURRENT_YEAR = document.getElementById('current-year');
+
+if (CURRENT_YEAR) {
+  CURRENT_YEAR.textContent = new Date().getFullYear().toString();
+}
