@@ -64,9 +64,10 @@ window.fsAttributes.push([
 
     function toggleFilterTags() {
       Object.entries(filters).forEach(([type, filter]) => {
-        filter.templateEl.style.display = 'none';
+        filter.templateEl?.classList.add('hide');
         const filterValuesSet = filterInstance.filtersData[filter.filtersDataIndex].values;
         if (filterValuesSet.size) {
+          filter.templateEl?.classList.remove('hide');
           filter.textEl.textContent = filterValuesSet.values().next().value;
         }
       });
