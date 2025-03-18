@@ -104,6 +104,8 @@ function fadeUpAnimation(
       start: 'top 85%',
       toggleActions: 'play none none none',
       markers: window.IS_DEBUG_MODE,
+      once: true,
+      invalidateOnRefresh: true,
       id: 'fade',
     },
   });
