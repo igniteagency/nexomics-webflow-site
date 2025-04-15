@@ -28,6 +28,14 @@ window.fsAttributes.push([
         textEl: null,
         deleteEl: null,
       },
+      methodologies: {
+        filterID: 'methodologies',
+        filtersDataIndex: 2,
+        elSelector: 'methodologies',
+        templateEl: null,
+        textEl: null,
+        deleteEl: null,
+      },
       search: {
         filterID: '*',
         filtersDataIndex: 0,
