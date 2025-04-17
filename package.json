@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@types/gsap": "^3.0.0",
+    "@vimeo/player": "^2.26.0",
     "gsap": "^3.12.7"
   }
 }
