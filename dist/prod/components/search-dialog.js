@@ -1,0 +1,1 @@
+"use strict";(()=>{var o='[data-el="search-dialog-trigger"]',n='[data-el="search-dialog"]';function c(){let e=document.querySelector(n),t=document.querySelector(o);t==null||t.addEventListener("click",()=>{e==null||e.showModal()})}})();

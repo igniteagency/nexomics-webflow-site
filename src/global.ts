@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { animatedDetailsAccordions } from '$components/accordions';
 import { initBgColorChange } from '$components/bg-color-change';
 import { dialogInit } from '$components/dialog';
+import { setSearchDialogTrigger } from '$components/search-dialog';
 import { initializeVimeoPlayers } from '$components/vimeo-player';
 import { fadeUp } from '$utils/fade';
 
@@ -17,6 +18,7 @@ window.Webflow?.push(() => {
   animatedDetailsAccordions();
   dialogInit();
   fadeUp();
+  setSearchDialogTrigger();
   initializeVimeoPlayers();
 });
 
