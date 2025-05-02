@@ -15,7 +15,7 @@ window.addEventListener(SCRIPTS_LOADED_EVENT, () => {
   handleBackdropClick();
 });
 
-export function dialogInit() {
+function dialogInit() {
   const dialogList = document.querySelectorAll<HTMLDialogElement>(DATA_COMPONENT_SELECTOR);
 
   dialogList.forEach((dialogEl) => {
