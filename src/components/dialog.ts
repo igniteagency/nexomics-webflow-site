@@ -53,8 +53,6 @@ function handleBackdropClick() {
       const dialogEl = event.target as HTMLDialogElement;
       if (!(dialogEl instanceof HTMLDialogElement)) return;
 
-      console.log('dialog click');
-
       // Check if click was directly on the dialog element (backdrop)
       const rect = dialogEl.getBoundingClientRect();
       const clickedInDialog =
@@ -64,7 +62,6 @@ function handleBackdropClick() {
         event.clientX <= rect.left + rect.width;
 
       if (clickedInDialog && event.target === dialogEl) {
-        console.log('clicked in dialog; Closing dialog');
         dialogEl.close();
       }
     });
