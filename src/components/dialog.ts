@@ -12,6 +12,7 @@ const DATA_COMPONENT_SELECTOR = `dialog[${DATA_ATTR}]`;
 
 window.addEventListener(SCRIPTS_LOADED_EVENT, () => {
   dialogInit();
+  handleBackdropClick();
 });
 
 export function dialogInit() {
@@ -37,6 +38,35 @@ export function dialogInit() {
       closeTriggerEl.addEventListener('click', () => {
         dialogEl.close();
       });
+    });
+  });
+}
+
+/**
+ * Handles backdrop click to close dialog
+ * Only closes if the click was directly on the dialog element (backdrop) and not its children
+ */
+function handleBackdropClick() {
+  const dialogEl = document.querySelectorAll<HTMLDialogElement>('dialog');
+  dialogEl.forEach((dialog) => {
+    dialog.addEventListener('click', (event) => {
+      const dialogEl = event.target as HTMLDialogElement;
+      if (!(dialogEl instanceof HTMLDialogElement)) return;
+
+      console.log('dialog click');
+
+      // Check if click was directly on the dialog element (backdrop)
+      const rect = dialogEl.getBoundingClientRect();
+      const clickedInDialog =
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width;
+
+      if (clickedInDialog && event.target === dialogEl) {
+        console.log('clicked in dialog; Closing dialog');
+        dialogEl.close();
+      }
     });
   });
 }
