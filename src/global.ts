@@ -5,12 +5,15 @@ import { animatedDetailsAccordions } from '$components/accordions';
 import { initBgColorChange } from '$components/bg-color-change';
 import '$components/dialog';
 import { setSearchDialogTrigger } from '$components/search-dialog';
+import { placeServicesSubmenu } from '$components/services-submenu';
 import { initializeVimeoPlayers } from '$components/vimeo-player';
 import { fadeUp } from '$utils/fade';
 
 window.gsap = gsap;
 window.ScrollTrigger = ScrollTrigger;
 window.gsap.registerPlugin(ScrollTrigger);
+
+placeServicesSubmenu();
 
 window.Webflow = window.Webflow || [];
 window.Webflow?.push(() => {
